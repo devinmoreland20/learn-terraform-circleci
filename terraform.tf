@@ -1,5 +1,11 @@
 terraform {
-  cloud {}
+  cloud {
+    organization = "Flintlocks-Terraform"
+
+    workspaces {
+      name = "learn-terraform-circleci"
+    }
+  }
 
   required_providers {
     aws = {
